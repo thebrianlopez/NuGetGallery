@@ -15,9 +15,12 @@ wr "nuget list sources"
 wr "nuget disable sources"
 
 wr "nuget add custom sources"
+iex "nuget sources add -name myget -source https://www.myget.org/F/thebrianlopez/api/v2"
 
 wr "nuget install packages to default path"
 
 wr "nuget config"
+iex "nuget config -set repositoryPath=Programs"
 
 wr "Complete"
+iex "nuget install axsadministration -o $env:userprofile\downloads -excludeversion"
