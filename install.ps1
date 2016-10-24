@@ -8,7 +8,7 @@ wr "Installing nuget"
 wr "Set the alias"
 set-alias -name nuget -value "$env:userprofile\nuget.exe"
 
-wr "Nuget Update Self
+wr "Nuget Update Self"
 nuget update -self
 
 wr "add relevent sources"
