@@ -1,6 +1,6 @@
-# powershell -exec Unrestricted -nopro -c "iex (new-object net.webclient)downloadstring('https://raw.githubusercontent.com/thebrianlopez/NuGetGallery/master/install.ps1')"
+#powershell -exec Unrestricted -nopro -c "iex (new-object net.webclient).downloadstring('https://raw.githubusercontent.com/thebrianlopez/NuGetGallery/master/install.ps1')"
 # install nuget
-set-alias -name wr -value write-host 
+set-alias -name wr -value write-verbose
 
 wr "Installing nuget"
 (new-object net.webclient).downloadfile("https://nuget.org/nuget.exe","$env:userprofile\nuget.exe")
